@@ -18,6 +18,7 @@ from harvestkit.engine import (
     run_cli,
 )
 from harvestkit.publish import publish
+from harvestkit.version import __version__
 
 __all__ = [
     "Source",
@@ -31,6 +32,5 @@ __all__ = [
     "deep_get",
     "Throttle",
     "publish",
+    "__version__",
 ]
-
-__version__ = "0.1.0a1"

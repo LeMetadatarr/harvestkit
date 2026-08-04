@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "harvestkit"
-version = "0.1.0a1"
+dynamic = ["version"]
 description = "Resumable bulk-dataset harvesting engine (checkpoint/dedup/paginate/throttle) for LeMetadatarr source clients."
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -35,3 +35,6 @@ Homepage = "https://github.com/LeMetadatarr/harvestkit"
 
 [tool.setuptools.packages.find]
 include = ["harvestkit*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "harvestkit.version.__version__"}
